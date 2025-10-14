@@ -61,16 +61,16 @@ root@cap's password:
  
 # HTTP
 Immediately finding a user, `Nathan` also we are logged in as him which is interesting
-![Security dashboard screenshot](images/htb/cap/dashboard.png)
+![Security dashboard screenshot](../../images/htb/cap/dashboard.png)
 ## Possible IDOR
-![IDOR](images/htb/cap/idor.png)
+![IDOR](../../images/htb/cap/idor.png)
 ## IDOR Confirmed
 Changed the data value to 1
 ```
 http://cap.htb/data/1
 ```
  
-![Confirmed IDOR](images/htb/cap/idor-confirmed.png)
+![Confirmed IDOR](../../images/htb/cap/idor-confirmed.png)
 
 
 ## Analysis of the `.pcap` file
@@ -78,7 +78,7 @@ I wasn't getting any juicy information, then I realized that 0 could also be a p
 
 ## Credentials
  
-![Wireshark](images/htb/cap/wireshark.png)
+![Wireshark](../../images/htb/cap/wireshark.png)
 ```
 nathan:Buck3tH4TF0RM3!
 ```
@@ -109,7 +109,7 @@ nathan@cap:~$ getcap -r / 2>/dev/null
 /usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper = cap_net_bind_service,cap_net_admin+ep
 ```
 
-![GTFOBins ](images/htb/cap/gtfobins.png)
+![GTFOBins ](../../images/htb/cap/gtfobins.png)
 
 This /usr/bin/python3.8 = cap_setuid,cap_net_bind_service+eip should stand out to you because it is not a normal capability, after a few google searches I found out that this was in GTFOBins 
 I tweaked the payload a bit so that it works like how I want it, the finished result is:
