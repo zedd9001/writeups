@@ -1,3 +1,3 @@
 # Writeups
 
-I haven't made a writeup yet, but coming soon!
+I haven't made writeup(s) yet, but coming soon!
