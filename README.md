@@ -3,3 +3,6 @@ I made this repo so that I can reinforce some of my learning and also teach othe
 ## HackTheBox
 ### Easy 
 [Cap](/htb/cap.md)
+## TryHackMe
+### Easy 
+[CyberHeroes](/thm/cyberheroes.md)
