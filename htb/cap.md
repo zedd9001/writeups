@@ -2,6 +2,13 @@
 
 Hi guys thanks for reading, if you find this writeup helpful, please consider giving a ⭐ to my repo
 
+# Info about the Box
+**Name**: Cap  
+**Difficulty**: Easy  
+**OS**: Linux  
+**Creator**: [InfoSecJack](https://app.hackthebox.com/users/52045)  
+**Writeup author**: [im4geeked](https://app.hackthebox.com/users/2732230)
+
 # Intro
 
 Cap is an easy rated straight forward HackTheBox machine which starts off with an IDOR which allows us to analyze other users `.pcap` files, changing the value which is vulnerable to IDOR to `0` and then analyzing the file we find credentials and then log into SSH, there we find that an exploitable capability is there and is in GTFOBins and then we root the box
