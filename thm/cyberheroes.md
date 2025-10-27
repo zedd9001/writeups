@@ -205,7 +205,7 @@ h3ck3rBoi:54321@terceSrepuS
 
 Seems like the value is reversed, I searched around in google and found an easy way to do it in the command line: 
 ```
-root@im4geeked:~# echo '54321@terceSrepuS' | rev
+root@zack:~# echo '54321@terceSrepuS' | rev
 SuperSecret@12345
 ```
 
